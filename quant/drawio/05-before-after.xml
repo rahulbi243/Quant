@@ -1,0 +1,184 @@
+<mxfile host="app.diagrams.net" modified="2026-02-20T00:00:00.000Z" agent="draw.io" version="24.0.0" type="device">
+  <diagram id="before-after" name="Before vs After: Base Paper → Our Extension">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="&lt;b&gt;Side-by-Side: Base Paper vs Our Proposed Extension&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="400" y="15" width="440" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="divider" value="" style="shape=line;strokeColor=#999999;strokeWidth=3;dashed=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="770" y="50" width="1" height="1000" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="left_title" value="&lt;b&gt;BASE PAPER&lt;/b&gt;&lt;br&gt;&lt;i&gt;&quot;Future Is Unevenly Distributed&quot;&lt;/i&gt;&lt;br&gt;Karkar &amp; Chopra, AAAI 2026" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=12;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="220" y="55" width="300" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_domain_label" value="&lt;b&gt;DOMAIN&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="135" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_domain" value="General forecasting&lt;br&gt;(6 domains: Politics, Entertainment,&lt;br&gt;Sports, Tech, Finance, Geopolitics)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="160" width="290" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_data_label" value="&lt;b&gt;DATA&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="225" width="50" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_data" value="150 prediction market questions&lt;br&gt;(Polymarket, Metaculus, Manifold)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_models_label" value="&lt;b&gt;MODELS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_models" value="4 models (GPT-5, GPT-4.1, Claude 3.7,&lt;br&gt;DeepSeek-R1)&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;No reasoning vs standard comparison&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="325" width="290" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_cond_label" value="&lt;b&gt;CONDITIONS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="390" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_cond" value="2 conditions:&lt;br&gt;Bare prompt vs +News context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="415" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_metrics_label" value="&lt;b&gt;METRICS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="465" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_metrics" value="Accuracy, Brier Score, ECE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="290" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_conf_label" value="&lt;b&gt;CONFIDENCE&lt;br&gt;MEASUREMENT&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="530" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_conf" value="&lt;font color=&quot;#b85450&quot;&gt;&lt;b&gt;NONE&lt;/b&gt;&lt;br&gt;No entropy / logprobs / confidence scoring&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="575" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_filter_label" value="&lt;b&gt;PREDICTION&lt;br&gt;FILTERING&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="625" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_filter" value="&lt;font color=&quot;#b85450&quot;&gt;&lt;b&gt;NONE&lt;/b&gt;&lt;br&gt;All predictions treated equally&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="670" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_gt_label" value="&lt;b&gt;GROUND TRUTH&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="120" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_gt" value="Market resolution (binary yes/no)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="745" width="290" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l_finding" value="&lt;b&gt;KEY FINDINGS&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Performance varies hugely by domain&lt;br&gt;• Finance/Sports worst (Brier ~0.30)&lt;br&gt;• News context hurts as much as helps&lt;br&gt;• 3 failure modes: recency bias,&lt;br&gt;&amp;nbsp;&amp;nbsp;rumor anchoring, definition drift&lt;br&gt;• DeepSeek-R1 gave no reasoning traces" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;align=left;spacingLeft=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="800" width="290" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrow_extends" value="&lt;b&gt;EXTENDS&lt;br&gt;+&lt;br&gt;COMBINES&lt;br&gt;WITH&lt;/b&gt;" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.5;arrowSize=0.15;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;fontSize=11;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="415" y="130" width="80" height="710" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tje_ref" value="&lt;b&gt;+ &quot;Think Just Enough&quot;&lt;/b&gt;&lt;br&gt;(NeurIPS 2025)&lt;br&gt;&lt;i&gt;Entropy as confidence signal&lt;/i&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=20;position=0.7;position2=0;base=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="360" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="right_title" value="&lt;b&gt;OUR EXTENSION&lt;/b&gt;&lt;br&gt;&lt;i&gt;&quot;Think Before You Trade&quot;&lt;/i&gt;&lt;br&gt;Entropy-Guided TSMOM Forecasting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=12;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="55" width="300" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_domain_label" value="&lt;b&gt;DOMAIN&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="135" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_domain" value="&lt;b&gt;Financial time-series momentum&lt;/b&gt;&lt;br&gt;(4 asset classes: Equities, Commodities,&lt;br&gt;Bonds, Currencies)&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ Focused on their WEAKEST domain&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="160" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_data_label" value="&lt;b&gt;DATA&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="240" width="50" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_data" value="&lt;b&gt;15 ETFs × 120 months = 1,800 forecasts/model&lt;/b&gt;&lt;br&gt;(AQR TSMOM data + yfinance)&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ 12× more data points per model&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="265" width="290" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_models_label" value="&lt;b&gt;MODELS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="330" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_models" value="&lt;b&gt;8 models: 3 standard + 5 reasoning&lt;/b&gt;&lt;br&gt;Paired by family (GPT-4.1↔o3,&lt;br&gt;Claude std↔think, DSv3↔R1)&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ Controlled comparison isolates reasoning&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="355" width="290" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_cond_label" value="&lt;b&gt;CONDITIONS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="435" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_cond" value="Bare prompt + Analyst/Superforecaster prompt&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ Tests prompt × reasoning interaction&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="460" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_metrics_label" value="&lt;b&gt;METRICS&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="510" width="70" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_metrics" value="Accuracy, Brier, ECE &lt;b&gt;+ Sharpe ratio,&lt;br&gt;max drawdown, Calmar, hit rate,&lt;br&gt;cost-adjusted Sharpe&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ Financial performance metrics&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="535" width="290" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_conf_label" value="&lt;b&gt;CONFIDENCE&lt;br&gt;MEASUREMENT&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="610" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_conf" value="⭐ &lt;b&gt;SEQUENCE-LEVEL SHANNON ENTROPY&lt;/b&gt;&lt;br&gt;from token logprobs (top-20)&lt;br&gt;H_mean = (1/T) Σ Hₜ&lt;br&gt;+ Proxy entropy for DeepSeek-R1&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ From Lossfunk's &quot;Think Just Enough&quot;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="820" y="650" width="290" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_filter_label" value="&lt;b&gt;PREDICTION&lt;br&gt;FILTERING&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="740" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_filter" value="⭐ &lt;b&gt;ENTROPY-GATED FILTERING&lt;/b&gt;&lt;br&gt;If H ≤ τ → use LLM signal&lt;br&gt;If H &gt; τ → fallback to classical TSMOM&lt;br&gt;4 threshold methods from Lossfunk&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ CORE INNOVATION: only trust confident forecasts&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="820" y="780" width="290" height="85" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_gt_label" value="&lt;b&gt;GROUND TRUTH&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="820" y="875" width="120" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_gt" value="&lt;b&gt;Actual next-month returns + backtest PnL&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;↑ Directly verifiable financial performance&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="900" width="290" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r_finding" value="&lt;b&gt;EXPECTED CONTRIBUTIONS&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Does reasoning improve financial calibration?&lt;br&gt;• Does entropy discriminate in finance domain?&lt;br&gt;• Can entropy filtering improve Sharpe ratio?&lt;br&gt;• Proxy entropy method for no-logprobs models&lt;br&gt;• Cost-adjusted model recommendations&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;&lt;b&gt;Every outcome is publishable.&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;arcSize=10;fontSize=10;align=left;spacingLeft=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="135" width="290" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="new1" value="NEW" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#548235;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="650" width="35" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="new2" value="NEW" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=#548235;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="780" width="35" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ext1" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="760" y="170" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext2" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="760" y="260" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext3" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="760" y="360" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext4" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="760" y="450" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext5" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="760" y="535" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext6" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="650" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext7" value="→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="780" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

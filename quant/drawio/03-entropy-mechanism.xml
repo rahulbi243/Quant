@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" modified="2026-02-20T00:00:00.000Z" agent="draw.io" version="24.0.0" type="device">
+  <diagram id="entropy-detail" name="Entropy Mechanism Detail">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="&lt;b&gt;How Entropy-Gated Confidence Filtering Works&lt;/b&gt;&lt;br&gt;&lt;i&gt;Adapting Lossfunk's &quot;Think Just Enough&quot; to Financial Momentum Forecasting&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="550" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step1_label" value="&lt;b&gt;STEP 1&lt;/b&gt;  Feed 12-Month Return Data to LLM" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#4472C4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="340" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="input_data" value="&lt;font face=&quot;Courier New&quot; size=&quot;2&quot;&gt;&lt;b&gt;Instrument: SPY (S&amp;P 500 ETF)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Month 1: +2.3%&lt;br&gt;Month 2: -1.1%&lt;br&gt;Month 3: +0.8%&lt;br&gt;Month 4: +3.2%&lt;br&gt;Month 5: -0.4%&lt;br&gt;Month 6: +1.7%&lt;br&gt;Month 7: +2.1%&lt;br&gt;Month 8: -2.8%&lt;br&gt;Month 9: +1.4%&lt;br&gt;Month 10: +0.9%&lt;br&gt;Month 11: +2.6%&lt;br&gt;Month 12: +1.5%&lt;br&gt;&lt;br&gt;Cumulative 12mo: +12.6%&lt;br&gt;Recent 3mo: +5.1%&lt;br&gt;Volatility: 15.8%&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;align=left;spacingLeft=15;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="115" width="240" height="330" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_input_model" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="input_data" target="model_box" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step2_label" value="&lt;b&gt;STEP 2&lt;/b&gt;  LLM Generates Response (with logprobs enabled)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#4472C4;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="420" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="model_box" value="&lt;b&gt;LLM&lt;/b&gt; (e.g., Claude 3.7 with Extended Thinking)&lt;br&gt;&lt;i&gt;logprobs=true, top_logprobs=20&lt;/i&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;size=0.08;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="380" y="115" width="350" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reasoning_trace" value="&lt;b&gt;Reasoning Trace (thinking tokens):&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;&lt;font color=&quot;#82b366&quot;&gt;The cumulative return is +12.6%, clearly positive.&lt;br&gt;The trend has been consistently up with only 3 down&lt;br&gt;months out of 12. Recent momentum (+5.1% over 3mo)&lt;br&gt;is accelerating. Volatility is moderate at 15.8%.&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot;&gt;This looks like a strong momentum signal. The 12-month&lt;br&gt;return is well above zero, and the pattern is typical&lt;br&gt;of a sustained uptrend.&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;&lt;b&gt;I'm fairly confident the next month will be positive.&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;align=left;spacingLeft=10;spacingTop=5;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="185" width="350" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_model_trace" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;" edge="1" source="model_box" target="reasoning_trace" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="output_tokens" value="&lt;b&gt;Output Tokens with Logprobs:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Token: {&lt;br&gt;&amp;nbsp;&amp;nbsp;logprob: -0.02, top_logprobs: [{&quot;{&quot;: -0.02}, {&quot;The&quot;: -4.1}, ...]&lt;br&gt;&lt;br&gt;Token: &quot;probability&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;logprob: -0.08, top_logprobs: [{&quot;probability&quot;: -0.08}, {&quot;prob&quot;: -2.8}, ...]&lt;br&gt;&lt;br&gt;Token: 7&lt;br&gt;&amp;nbsp;&amp;nbsp;logprob: -0.45, top_logprobs: [{&quot;7&quot;: -0.45}, {&quot;6&quot;: -1.2}, {&quot;8&quot;: -1.5}, ...]&lt;br&gt;&lt;br&gt;Token: 2&lt;br&gt;&amp;nbsp;&amp;nbsp;logprob: -0.31, top_logprobs: [{&quot;2&quot;: -0.31}, {&quot;5&quot;: -1.4}, {&quot;0&quot;: -1.8}, ...]&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=10;align=left;spacingLeft=10;spacingTop=5;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="405" width="350" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_trace_output" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;" edge="1" source="reasoning_trace" target="output_tokens" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="final_answer" value="&lt;b&gt;Final Answer:&lt;/b&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot;&gt;{&quot;probability&quot;: 72,&lt;br&gt;&amp;nbsp;&quot;direction&quot;: &quot;long&quot;}&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="115" y="470" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out_ans" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;dashed=1;" edge="1" source="output_tokens" target="final_answer" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step3_label" value="&lt;b&gt;STEP 3&lt;/b&gt;  Compute Sequence-Level Shannon Entropy" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="50" y="625" width="390" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ent_step1" value="&lt;b&gt;For each output token t:&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. Get top-20 logprobs&lt;br&gt;2. Convert to probabilities:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;pᵢ = exp(ℓᵢ) / Σ exp(ℓⱼ)&lt;/b&gt;&lt;br&gt;3. Compute token entropy:&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Hₜ = −Σ pᵢ × log₂(pᵢ)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="660" width="260" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_logp_ent" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="output_tokens" target="ent_step1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="token_entropies" value="&lt;b&gt;Per-Token Entropy Values:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Token &quot;{&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ H = 0.12 bits &lt;font color=&quot;#82b366&quot;&gt;████&lt;/font&gt; (very sure)&lt;br&gt;Token &quot;probability&quot; → H = 0.41 bits &lt;font color=&quot;#82b366&quot;&gt;█████████&lt;/font&gt; (sure)&lt;br&gt;Token &quot;7&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ H = 1.83 bits &lt;font color=&quot;#d6b656&quot;&gt;████████████████████&lt;/font&gt; (moderate)&lt;br&gt;Token &quot;2&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ H = 1.45 bits &lt;font color=&quot;#d6b656&quot;&gt;████████████████&lt;/font&gt; (moderate)&lt;br&gt;Token &quot;long&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ H = 0.28 bits &lt;font color=&quot;#82b366&quot;&gt;██████&lt;/font&gt; (sure)&lt;br&gt;&lt;br&gt;&lt;/font&gt;Highest entropy on the NUMBER tokens&lt;br&gt;(model is uncertain about &lt;b&gt;exact probability&lt;/b&gt;,&lt;br&gt;but confident about &lt;b&gt;direction&lt;/b&gt;)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#b85450;arcSize=10;align=left;spacingLeft=10;spacingTop=5;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="370" y="640" width="380" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_ent_vis" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;" edge="1" source="ent_step1" target="token_entropies" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="seq_mean" value="&lt;b&gt;SEQUENCE MEAN ENTROPY&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font size=&quot;4&quot;&gt;H_mean = (1/T) × Σ Hₜ&lt;/font&gt;&lt;br&gt;&lt;br&gt;= (0.12 + 0.41 + 1.83 + 1.45 + 0.28 + ...) / T&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;font size=&quot;4&quot; color=&quot;#82b366&quot;&gt;H_mean = 0.82 bits&lt;/font&gt;&lt;/b&gt;&lt;br&gt;(relatively low → model is confident)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="140" y="860" width="350" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_vis_mean" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="ent_step1" target="seq_mean" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step4_label" value="&lt;b&gt;STEP 4&lt;/b&gt;  Compare Against Entropy Threshold" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#548235;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1030" width="340" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="threshold_box" value="&lt;b&gt;Threshold τ = 1.15 bits&lt;/b&gt;&lt;br&gt;&lt;i&gt;(mean entropy of correct predictions&lt;br&gt;from training window)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="560" y="900" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decision2" value="&lt;font size=&quot;3&quot;&gt;&lt;b&gt;H_mean ≤ τ ?&lt;/b&gt;&lt;br&gt;0.82 ≤ 1.15 ?&lt;/font&gt;" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1065" width="170" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_mean_dec" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="seq_mean" target="decision2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_th_dec2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="threshold_box" target="decision2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="trade_yes" value="&lt;b&gt;✓ YES — TRADE&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Use LLM signal: &lt;b&gt;LONG SPY&lt;/b&gt;&lt;br&gt;Position = 1 / volatility&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;Model was confident AND&lt;br&gt;entropy confirmed it.&lt;br&gt;Trust the forecast.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=11;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1070" width="230" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_dec_trade" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=3;" edge="1" source="decision2" target="trade_yes" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="yes2_label" value="&lt;b&gt;YES&lt;/b&gt; (0.82 ≤ 1.15)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1095" width="120" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="trade_no" value="&lt;b&gt;✗ NO — FALLBACK&lt;/b&gt;&lt;br&gt;&lt;hr&gt;If H_mean were 1.5 bits:&lt;br&gt;&lt;br&gt;Option A: Use classical TSMOM&lt;br&gt;(still go long, but based on&lt;br&gt;simple sign of 12mo return)&lt;br&gt;&lt;br&gt;Option B: Skip this trade&lt;br&gt;(position = 0)&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;Model was hedging too much.&lt;br&gt;Don't trust a confused forecast.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1220" width="250" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_dec_notrade" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="decision2" target="trade_no" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="no2_label" value="&lt;b&gt;NO&lt;/b&gt; (would be if H &gt; 1.15)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1195" width="180" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="insight" value="&lt;b&gt;THE INSIGHT&lt;/b&gt;&lt;br&gt;&lt;br&gt;Lossfunk showed entropy discriminates correct from incorrect reasoning&lt;br&gt;in math/science (Cohen's d &gt; 0.5 in reasoning models).&lt;br&gt;&lt;br&gt;&lt;b&gt;Our question:&lt;/b&gt; Does this transfer to &lt;b&gt;financial forecasting&lt;/b&gt;?&lt;br&gt;&lt;br&gt;If YES → entropy-filtered TSMOM has higher Sharpe than raw TSMOM&lt;br&gt;If NO → entropy is domain-specific (also a publishable finding)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;arcSize=10;fontSize=12;align=left;spacingLeft=15;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1280" width="500" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_trade_insight" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#432D57;strokeWidth=2;" edge="1" source="trade_yes" target="insight" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

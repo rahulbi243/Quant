@@ -9,7 +9,10 @@
       "WebFetch(domain:x.com)",
       "WebFetch(domain:publish.twitter.com)",
       "WebFetch(domain:quantpedia.com)",
-      "WebFetch(domain:www.aqr.com)"
+      "WebFetch(domain:www.aqr.com)",
+      "Bash(for f in *.xml)",
+      "Bash(do sed -i 's/<mxCell id=\"\"\\\\\\([^\"\"]*\\\\\\)\"\" style=\"\"\\\\\\([^\"\"]*\\\\\\)\"\" edge=\"\"1\"\"/<mxCell id=\"\"\\\\1\"\" value=\"\"\"\" style=\"\"\\\\2\"\" edge=\"\"1\"\"/g' \"$f\")",
+      "Bash(done)"
     ]
   }
 }

@@ -1,0 +1,134 @@
+<mxfile host="app.diagrams.net" modified="2026-02-20T00:00:00.000Z" agent="draw.io" version="24.0.0" type="device">
+  <diagram id="model-comparison" name="Model Comparison: Standard vs Reasoning">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="&lt;b&gt;Model Comparison: Isolating the Effect of Reasoning on Momentum Forecasting&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="600" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fam1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F4FF;strokeColor=#6c8ebf;arcSize=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="400" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="fam1_title" value="&lt;b&gt;FAMILY 1: OpenAI&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#4472C4;" vertex="1" parent="1">
+          <mxGeometry x="160" y="78" width="140" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gpt41" value="&lt;b&gt;GPT-4.1&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Standard&lt;br&gt;Logprobs: ✓ top-20&lt;br&gt;Cost: ~$0.02/query&lt;br&gt;Reasoning: None" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="115" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="o3" value="&lt;b&gt;o3&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Reasoning&lt;br&gt;Logprobs: ✓ output only&lt;br&gt;Cost: ~$0.12/query&lt;br&gt;Reasoning: Extended (encrypted)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="260" y="115" width="165" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="o4mini" value="&lt;b&gt;o4-mini&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Reasoning (small)&lt;br&gt;Logprobs: ✓ output only&lt;br&gt;Cost: ~$0.02/query&lt;br&gt;Reasoning: Extended (encrypted)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="260" y="230" width="165" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vs1" value="&lt;b&gt;VS&lt;/b&gt;" style="shape=doubleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.25;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="145" width="30" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="vs1_label" value="Same family&lt;br&gt;&lt;b&gt;isolates reasoning&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#BF8F00;" vertex="1" parent="1">
+          <mxGeometry x="75" y="225" width="100" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fam2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF5F5;strokeColor=#b85450;arcSize=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="70" width="410" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="fam2_title" value="&lt;b&gt;FAMILY 2: Anthropic&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="600" y="78" width="160" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="claude_std" value="&lt;b&gt;Claude 3.7 Sonnet&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Standard&lt;br&gt;Logprobs: ✓ top-20&lt;br&gt;Cost: ~$0.02/query&lt;br&gt;Reasoning: None" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="115" width="170" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="claude_think" value="&lt;b&gt;Claude 3.7 (Thinking)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Reasoning&lt;br&gt;Logprobs: ✓ top-20 (full)&lt;br&gt;Cost: ~$0.06/query&lt;br&gt;Reasoning: Extended (visible!)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="700" y="115" width="175" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vs2" value="&lt;b&gt;VS&lt;/b&gt;" style="shape=doubleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.25;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="675" y="145" width="30" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="claude_best" value="⭐ &lt;b&gt;Best pair for entropy study&lt;/b&gt;&lt;br&gt;Full logprobs on BOTH models&lt;br&gt;+ visible thinking trace" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="690" y="230" width="190" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fam3_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5FFF0;strokeColor=#82b366;arcSize=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="930" y="70" width="430" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="fam3_title" value="&lt;b&gt;FAMILY 3: DeepSeek&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#548235;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="78" width="160" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dsv3" value="&lt;b&gt;DeepSeek-V3&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Standard&lt;br&gt;Logprobs: ✓ top-20&lt;br&gt;Cost: ~$0.005/query&lt;br&gt;Reasoning: None" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="950" y="115" width="170" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dsr1" value="&lt;b&gt;DeepSeek-R1&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Type: Reasoning&lt;br&gt;Logprobs: ✗ UNAVAILABLE&lt;br&gt;Cost: ~$0.01/query&lt;br&gt;Reasoning: &amp;lt;think&amp;gt; tags (visible)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;align=left;spacingLeft=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="115" width="175" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vs3" value="&lt;b&gt;VS&lt;/b&gt;" style="shape=doubleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.25;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="145" width="30" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ds_constraint" value="⚠ &lt;b&gt;No logprobs on R1!&lt;/b&gt;&lt;br&gt;Must use PROXY ENTROPY&lt;br&gt;(hedging words, chain length,&lt;br&gt;self-contradictions)&lt;br&gt;&lt;i&gt;→ Novel contribution&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="230" width="210" height="85" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gemini_box" value="&lt;b&gt;+ Gemini 2.5 Pro&lt;/b&gt; (Google)&lt;br&gt;Reasoning | Logprobs ✓ | ~$0.04/q&lt;br&gt;&lt;i&gt;Optional — drop if over budget&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#999999;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="310" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="measure_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8F0;strokeColor=#d6b656;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="1320" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="measure_title" value="&lt;b&gt;FOR EACH FAMILY PAIR, WE MEASURE:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#BF8F00;" vertex="1" parent="1">
+          <mxGeometry x="60" y="398" width="280" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m1" value="&lt;b&gt;① Direction Accuracy&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Does reasoning model predict&lt;br&gt;momentum direction better?&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Δ accuracy = acc(reasoning) − acc(standard)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="435" width="230" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m2" value="&lt;b&gt;② Calibration (Brier/ECE)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Are reasoning probability&lt;br&gt;estimates better calibrated?&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Δ Brier = Brier(std) − Brier(reasoning)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="435" width="230" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m3" value="&lt;b&gt;③ Entropy Discrimination&lt;/b&gt; ⭐&lt;br&gt;&lt;hr&gt;Can entropy separate correct&lt;br&gt;from incorrect forecasts?&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Cohen's d = (μ_correct − μ_incorrect) / σ_pooled&lt;br&gt;d &gt; 0.5 = useful signal&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="435" width="250" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m4" value="&lt;b&gt;④ Strategy Sharpe&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Does entropy-filtered LLM&lt;br&gt;beat classical TSMOM?&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Sharpe(entropy_filtered) vs Sharpe(TSMOM)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="830" y="435" width="240" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m5" value="&lt;b&gt;⑤ Cost Efficiency&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Sharpe per dollar&lt;br&gt;of API cost&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Sharpe / cost_per_forecast&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="435" width="240" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="results_title" value="&lt;b&gt;HYPOTHESIZED RESULTS (what we expect to find):&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="630" width="370" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="results_table" value="&lt;table style=&quot;font-size:11px;border-collapse:collapse;width:100%&quot;&gt;&lt;tr style=&quot;background:#4472C4;color:white;font-weight:bold&quot;&gt;&lt;td style=&quot;padding:6px;border:1px solid #333&quot;&gt;Metric&lt;/td&gt;&lt;td style=&quot;padding:6px;border:1px solid #333&quot;&gt;GPT-4.1→o3&lt;/td&gt;&lt;td style=&quot;padding:6px;border:1px solid #333&quot;&gt;Claude→Think&lt;/td&gt;&lt;td style=&quot;padding:6px;border:1px solid #333&quot;&gt;DSv3→R1&lt;/td&gt;&lt;td style=&quot;padding:6px;border:1px solid #333&quot;&gt;Interpretation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;font-weight:bold&quot;&gt;Δ Accuracy&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;+2-5%&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;+2-5%&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#999&quot;&gt;~0%&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;Modest accuracy gain&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#f9f9f9&quot;&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;font-weight:bold&quot;&gt;Δ Brier Score&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;−0.05 to −0.10&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;−0.05 to −0.10&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#999&quot;&gt;−0.02&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;&lt;b&gt;Bigger calibration gain (H1)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;font-weight:bold&quot;&gt;Entropy Cohen's d&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;&gt;0.5&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;&gt;0.5&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#d6b656&quot;&gt;proxy TBD&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;&lt;b&gt;Entropy IS a confidence signal (H3)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#f9f9f9&quot;&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;font-weight:bold&quot;&gt;Filtered Sharpe Δ&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;+0.1 to +0.3&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;+0.1 to +0.3&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#999&quot;&gt;TBD&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;&lt;b&gt;Filtering IMPROVES strategy (H4)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;font-weight:bold&quot;&gt;Cost/Sharpe Winner&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;Expensive&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;Best ratio?&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc;color:#82b366&quot;&gt;&lt;b&gt;Cheapest?&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;padding:5px;border:1px solid #ccc&quot;&gt;Practical deployment question&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;arcSize=5;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="40" y="665" width="800" height="250" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="legend" value="&lt;b&gt;LEGEND&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;font color=&quot;#dae8fc&quot;&gt;███&lt;/font&gt; Standard Model (control)&lt;br&gt;&lt;font color=&quot;#e1d5e7&quot;&gt;███&lt;/font&gt; Reasoning Model (experimental)&lt;br&gt;&lt;font color=&quot;#f8cecc&quot;&gt;███&lt;/font&gt; Constraint / Special case&lt;br&gt;&lt;font color=&quot;#d5e8d4&quot;&gt;███&lt;/font&gt; Best option for study" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;arcSize=10;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="880" y="670" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="key_insight" value="&lt;b&gt;KEY DESIGN PRINCIPLE:&lt;/b&gt;&lt;br&gt;&lt;br&gt;By comparing Standard vs Reasoning &lt;b&gt;within the same model family&lt;/b&gt;,&lt;br&gt;we isolate the EFFECT OF REASONING ITSELF on forecasting quality.&lt;br&gt;Everything else (training data, architecture base, alignment) is held constant." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;arcSize=10;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="880" y="800" width="420" height="100" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,30 @@
+# Async I/O
+aiohttp>=3.9
+aiosqlite>=0.19
+
+# Scheduler
+apscheduler>=3.10
+
+# Exchange clients
+py-clob-client>=0.16
+kalshi-python-client>=2.0
+
+# LLM providers
+anthropic>=0.40
+openai>=1.50
+
+# News search
+tavily-python>=0.3
+# brave-search-python>=0.1   # alternative
+
+# Reliability
+tenacity>=8.2
+
+# Utilities
+python-dotenv>=1.0
+thefuzz>=0.22        # fuzzy string matching for market dedup
+numpy>=1.26
+
+# Dev / testing
+pytest>=8.0
+pytest-asyncio>=0.23

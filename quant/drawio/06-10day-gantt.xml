@@ -1,0 +1,213 @@
+<mxfile host="app.diagrams.net" modified="2026-02-20T00:00:00.000Z" agent="draw.io" version="24.0.0" type="device">
+  <diagram id="gantt" name="10-Day Execution Gantt">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="&lt;b&gt;10-Day Execution Plan: &quot;Think Before You Trade&quot;&lt;/b&gt;&lt;br&gt;Feb 20 — Mar 1, 2026" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="450" y="10" width="380" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="h_task" value="&lt;b&gt;PHASE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="130" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d1" value="&lt;b&gt;D1&lt;/b&gt;&lt;br&gt;Feb 20" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="150" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d2" value="&lt;b&gt;D2&lt;/b&gt;&lt;br&gt;Feb 21" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="260" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d3" value="&lt;b&gt;D3&lt;/b&gt;&lt;br&gt;Feb 22" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="370" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d4" value="&lt;b&gt;D4&lt;/b&gt;&lt;br&gt;Feb 23" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="480" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d5" value="&lt;b&gt;D5&lt;/b&gt;&lt;br&gt;Feb 24" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="590" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d6" value="&lt;b&gt;D6&lt;/b&gt;&lt;br&gt;Feb 25" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="700" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d7" value="&lt;b&gt;D7&lt;/b&gt;&lt;br&gt;Feb 26" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="810" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d8" value="&lt;b&gt;D8&lt;/b&gt;&lt;br&gt;Feb 27" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="920" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d9" value="&lt;b&gt;D9&lt;/b&gt;&lt;br&gt;Feb 28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_d10" value="&lt;b&gt;D10&lt;/b&gt;&lt;br&gt;Mar 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="60" width="110" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r1_label" value="&lt;b&gt;FOUNDATION&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1_d1" value="&lt;b&gt;Read papers&lt;/b&gt;&lt;br&gt;Setup repo&lt;br&gt;Get API keys" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="103" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1_d2" value="&lt;b&gt;Data pipeline&lt;/b&gt;&lt;br&gt;AQR + yfinance&lt;br&gt;TSMOM baseline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="265" y="103" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1_d3" value="&lt;b&gt;Eval harness&lt;/b&gt;&lt;br&gt;Entropy code&lt;br&gt;Prompt templates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="375" y="103" width="100" height="44" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r2_label" value="&lt;b&gt;EXPERIMENTS&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2_d4" value="&lt;b&gt;Standard&lt;br&gt;models&lt;/b&gt;&lt;br&gt;~2,250 calls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="485" y="163" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2_d5" value="&lt;b&gt;Reasoning&lt;br&gt;models&lt;/b&gt;&lt;br&gt;~3,750 calls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="595" y="163" width="100" height="44" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r3_label" value="&lt;b&gt;ANALYSIS&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3_d6" value="&lt;b&gt;Quantitative&lt;/b&gt;&lt;br&gt;Metrics, stats&lt;br&gt;Hypothesis tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="705" y="223" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3_d7" value="&lt;b&gt;Qualitative&lt;/b&gt;&lt;br&gt;Visualizations&lt;br&gt;Case studies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="815" y="223" width="100" height="44" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r4_label" value="&lt;b&gt;OUTPUT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="280" width="130" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4_d8" value="&lt;b&gt;Research&lt;br&gt;note&lt;/b&gt;&lt;br&gt;4-6 pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="925" y="283" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4_d9" value="&lt;b&gt;Polish&lt;/b&gt;&lt;br&gt;Clean code&lt;br&gt;Open source" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="283" width="100" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4_d10" value="&lt;b&gt;APPLY&lt;/b&gt;&lt;br&gt;Submit&lt;br&gt;application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;fontSize=9;arcSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1145" y="283" width="100" height="44" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cp_title" value="&lt;b&gt;CRITICAL PATH&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="20" y="345" width="110" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cp1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r1_d2" target="r1_d3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cp2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r1_d3" target="r2_d4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cp3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r2_d4" target="r2_d5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cp4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r2_d5" target="r3_d6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cp5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r3_d7" target="r4_d8" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cp6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="r4_d9" target="r4_d10" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="del_title" value="&lt;b&gt;DELIVERABLES&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=10;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="380" width="130" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="del_d1" value="Paper notes&lt;br&gt;Repo init&lt;br&gt;API keys ✓" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="150" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d2" value="etf_returns.parquet&lt;br&gt;classical_tsmom.py&lt;br&gt;Baseline Sharpe" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="260" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d3" value="evaluate.py&lt;br&gt;entropy/calculator.py&lt;br&gt;Pipeline tested" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="370" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d4" value="results/raw/&lt;br&gt;standard_models/&lt;br&gt;~2,250 predictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="480" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d5" value="results/raw/&lt;br&gt;reasoning_models/&lt;br&gt;~3,750 predictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="590" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d6" value="metrics_summary.csv&lt;br&gt;hypothesis_results.md&lt;br&gt;Stats computed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="700" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d7" value="7+ figures (PNG)&lt;br&gt;case_studies.md&lt;br&gt;Notebooks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="810" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d8" value="research_note.md&lt;br&gt;4-6 pages&lt;br&gt;Complete draft" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="920" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d9" value="Clean GitHub repo&lt;br&gt;README + Makefile&lt;br&gt;Reproducible" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=8;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="del_d10" value="&lt;b&gt;APPLICATION&lt;br&gt;SUBMITTED&lt;/b&gt;&lt;br&gt;+ repo link" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;fontSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="380" width="110" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="budget_title" value="&lt;b&gt;EST. COST&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=10;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="470" width="130" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d1" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="150" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d2" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="260" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d3" value="~$5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="370" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d4" value="&lt;b&gt;~$60&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="480" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d5" value="&lt;b&gt;~$250&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d6" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="700" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d7" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="810" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d8" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="920" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d9" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_d10" value="$0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#E6E6E6;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="470" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cost_total" value="&lt;b&gt;TOTAL: ~$315&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#333333;fontColor=#ffffff;strokeColor=#333333;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="470" width="100" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bracket_found" value="&lt;b&gt;FOUNDATION (3 days)&lt;/b&gt;" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;strokeColor=#6c8ebf;fontSize=10;fontColor=#6c8ebf;size=0.5;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="220" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="bracket_exp" value="&lt;b&gt;EXPERIMENTS (2 days)&lt;/b&gt;" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;strokeColor=#9673a6;fontSize=10;fontColor=#9673a6;size=0.5;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="490" y="490" width="220" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="bracket_anal" value="&lt;b&gt;ANALYSIS (2 days)&lt;/b&gt;" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;strokeColor=#d6b656;fontSize=10;fontColor=#d6b656;size=0.5;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="710" y="490" width="220" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="bracket_out" value="&lt;b&gt;OUTPUT (3 days)&lt;/b&gt;" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;strokeColor=#82b366;fontSize=10;fontColor=#82b366;size=0.5;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="975" y="490" width="280" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_note1" value="⚠ &lt;b&gt;If D2-D3 slip, everything shifts&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="260" y="540" width="220" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_note2" value="⚠ &lt;b&gt;D5 most expensive — monitor costs&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="590" y="540" width="230" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_note3" value="✓ &lt;b&gt;D8-D9 compressible to 1 day if needed&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="920" y="540" width="250" height="30" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

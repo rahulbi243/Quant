@@ -1,0 +1,338 @@
+<mxfile host="app.diagrams.net" modified="2026-02-20T00:00:00.000Z" agent="draw.io" version="24.0.0" type="device">
+  <diagram id="proposed-solution" name="Proposed: Entropy-Guided TSMOM Forecasting">
+    <mxGraphModel dx="1800" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="&lt;b&gt;Proposed Architecture: &quot;Think Before You Trade&quot;&lt;/b&gt;&lt;br&gt;Entropy-Guided Time-Series Momentum Forecasting&lt;br&gt;&lt;i&gt;Extends: Lossfunk's &quot;Think Just Enough&quot; (NeurIPS 2025) + &quot;Future Is Unevenly Distributed&quot; (AAAI 2026)&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="350" y="15" width="650" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F4FF;strokeColor=#6c8ebf;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="700" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1_label" value="&lt;b&gt;PHASE 1: DATA LAYER&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#4472C4;" vertex="1" parent="1">
+          <mxGeometry x="55" y="95" width="160" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="aqr" value="&lt;b&gt;AQR TSMOM&lt;br&gt;Factor Data&lt;/b&gt;&lt;br&gt;&lt;hr&gt;58 instruments&lt;br&gt;1985—2025&lt;br&gt;Monthly returns" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="125" width="130" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="yfinance" value="&lt;b&gt;Yahoo Finance&lt;br&gt;ETF Prices&lt;/b&gt;&lt;br&gt;&lt;hr&gt;15 ETFs&lt;br&gt;4 asset classes&lt;br&gt;2010—2025" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="125" width="130" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="asset_classes" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="125" width="330" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_title" value="&lt;b&gt;4 Asset Classes × 15 ETFs&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="128" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_eq" value="&lt;b&gt;Equities&lt;/b&gt;&lt;br&gt;SPY, EWJ&lt;br&gt;EWG, EFA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="400" y="152" width="72" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_cmd" value="&lt;b&gt;Commodities&lt;/b&gt;&lt;br&gt;GLD, USO&lt;br&gt;DBA, SLV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="482" y="152" width="72" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_bnd" value="&lt;b&gt;Bonds&lt;/b&gt;&lt;br&gt;TLT, IEF&lt;br&gt;SHY, BWX" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="564" y="152" width="72" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_fx" value="&lt;b&gt;Currencies&lt;/b&gt;&lt;br&gt;FXE, FXY&lt;br&gt;FXB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="646" y="152" width="72" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="ac_period" value="&lt;b&gt;Test Period:&lt;/b&gt; 120 months (2015—2025)&lt;br&gt;&lt;b&gt;Lookback:&lt;/b&gt; 12-month rolling window" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="430" y="207" width="220" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_aqr" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="aqr" target="compute_returns" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_yf" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="yfinance" target="compute_returns" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8F0;strokeColor=#d6b656;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="1340" height="460" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2_label" value="&lt;b&gt;PHASE 2: DUAL-PATH SIGNAL GENERATION&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#BF8F00;" vertex="1" parent="1">
+          <mxGeometry x="55" y="295" width="290" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="compute_returns" value="&lt;b&gt;Compute Monthly Returns&lt;/b&gt;&lt;br&gt;12-month cumulative&lt;br&gt;3-month recent&lt;br&gt;Annualized volatility" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;size=0.08;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="split" value="" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="195" y="420" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cr_split" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="compute_returns" target="split" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="path_a_label" value="&lt;b&gt;PATH A: Classical Baseline&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#82b366;fontStyle=5;" vertex="1" parent="1">
+          <mxGeometry x="55" y="490" width="190" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="classical_tsmom" value="&lt;b&gt;Classical TSMOM&lt;/b&gt;&lt;br&gt;&lt;hr&gt;signal = sign(12mo return)&lt;br&gt;position = signal / volatility&lt;br&gt;&lt;br&gt;&lt;i&gt;Moskowitz, Ooi, Pedersen 2012&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="190" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_split_classical" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;" edge="1" source="split" target="classical_tsmom" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="130" y="445"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="classical_signal" value="Classical&lt;br&gt;&lt;b&gt;TSMOM Signal&lt;/b&gt;&lt;br&gt;(Long / Short)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="650" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_ct_cs" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;" edge="1" source="classical_tsmom" target="classical_signal" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="path_b_label" value="&lt;b&gt;PATH B: LLM Forecasting + Entropy Measurement&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#6c8ebf;fontStyle=5;" vertex="1" parent="1">
+          <mxGeometry x="530" y="325" width="350" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="format_llm" value="&lt;b&gt;Format Data for LLM&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;Month 1: +2.3%&lt;br&gt;Month 2: -1.1%&lt;br&gt;...&lt;br&gt;Month 12: +1.5%&lt;br&gt;Cumulative: +14.2%&lt;br&gt;Volatility: 18.3%&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="360" width="160" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_split_format" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="split" target="format_llm" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_format_models" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="format_llm" target="std_models" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_format_models2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="format_llm" target="reas_models" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="std_models" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="580" y="360" width="210" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="std_title" value="&lt;b&gt;Standard Models&lt;/b&gt; (Control)&lt;br&gt;&lt;i&gt;No reasoning tokens&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="365" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm1" value="GPT-4.1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="595" y="405" width="85" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm2" value="Claude 3.7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="695" y="405" width="85" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm3" value="DeepSeek-V3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="443" width="95" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm_logprobs" value="✓ Logprobs available" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="625" y="475" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reas_models" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="830" y="360" width="530" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="reas_title" value="&lt;b&gt;Reasoning Models&lt;/b&gt; (Experimental)&lt;br&gt;&lt;i&gt;Extended thinking / chain-of-thought&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="365" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm1" value="o3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="845" y="405" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm2" value="o4-mini" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="935" y="405" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm3" value="Claude Think" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="405" width="90" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm4" value="DeepSeek-R1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="405" width="90" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm5" value="Gemini 2.5 Pro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="405" width="100" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="rm_logprobs" value="✓ Logprobs (o3, o4-mini, Claude, Gemini)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;✗ &lt;b&gt;No logprobs&lt;/b&gt; (R1)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="895" y="475" width="350" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fam1" value="&lt;b&gt;same&lt;br&gt;family&lt;/b&gt;" style="shape=doubleArrow;whiteSpace=wrap;html=1;arrowWidth=0.3;arrowSize=0.3;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="685" y="443" width="65" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="fam1a" value="GPT-4.1 ↔ o3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="750" y="447" width="80" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F5;strokeColor=#b85450;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="520" width="820" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3_label" value="&lt;b&gt;PHASE 3: ENTROPY EXTRACTION&lt;/b&gt; ⭐ KEY INNOVATION (from Lossfunk's &quot;Think Just Enough&quot;)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="575" y="525" width="520" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="llm_output" value="&lt;b&gt;LLM Output&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Probability: 72%&lt;br&gt;• Direction: Long&lt;br&gt;• Reasoning trace&lt;br&gt;• Token logprobs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="560" width="150" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_std_out" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="std_models" target="llm_output" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_reas_out" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;" edge="1" source="reas_models" target="llm_output" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="entropy_compute" value="&lt;b&gt;Shannon Entropy&lt;br&gt;(from logprobs)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;pᵢ = softmax(logprob_i)&lt;br&gt;Hₜ = −Σ pᵢ log₂(pᵢ)&lt;br&gt;&lt;b&gt;H_mean = (1/T) Σ Hₜ&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="790" y="555" width="190" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out_entropy" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="llm_output" target="entropy_compute" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="proxy_entropy" value="&lt;b&gt;Proxy Entropy&lt;br&gt;(for DeepSeek-R1)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Hedging word freq&lt;br&gt;• Reasoning chain length&lt;br&gt;• Self-contradiction count&lt;br&gt;&lt;i&gt;(Novel contribution)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="555" width="175" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out_proxy" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=1;dashed=1;" edge="1" source="llm_output" target="proxy_entropy" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="proxy_note" value="⚠ DeepSeek-R1&lt;br&gt;has NO logprobs API&lt;br&gt;→ use linguistic proxies" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=12;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="565" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_proxy_note" value="" style="dashed=1;strokeColor=#d6b656;" edge="1" source="proxy_entropy" target="proxy_note" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="entropy_value" value="&lt;b&gt;Entropy Score&lt;br&gt;H_mean&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;Low H = Confident&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;High H = Uncertain&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="690" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_ec_ev" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;" edge="1" source="entropy_compute" target="entropy_value" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pe_ev" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;dashed=1;" edge="1" source="proxy_entropy" target="entropy_value" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="llm_signal" value="LLM&lt;br&gt;&lt;b&gt;Forecast Signal&lt;/b&gt;&lt;br&gt;(Prob + Direction)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="690" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out_sig" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;" edge="1" source="llm_output" target="llm_signal" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p4_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FFF0;strokeColor=#82b366;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="790" width="1340" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="p4_label" value="&lt;b&gt;PHASE 4: ENTROPY-GATED DECISION ENGINE&lt;/b&gt; ⭐ CORE MECHANISM" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#548235;" vertex="1" parent="1">
+          <mxGeometry x="55" y="795" width="430" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="threshold" value="&lt;b&gt;Compute Entropy Threshold τ&lt;/b&gt;&lt;br&gt;&lt;hr&gt;From Lossfunk's 4 methods:&lt;br&gt;τ₁ = mean(H | correct preds)&lt;br&gt;τ₂ = μ_c + σ_c·ln(1+|d|)&lt;br&gt;τ₃ = Bayesian optimal&lt;br&gt;τ₄ = Scale-invariant universal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="830" width="230" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_ev_th" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="entropy_value" target="threshold" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decision" value="&lt;b&gt;H ≤ τ ?&lt;/b&gt;" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="855" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_th_dec" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="threshold" target="decision" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_sig_dec" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;dashed=1;" edge="1" source="llm_signal" target="decision" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="use_llm" value="&lt;b&gt;USE LLM SIGNAL&lt;/b&gt;&lt;br&gt;&lt;hr&gt;position = LLM_direction&lt;br&gt;× inverse_vol_weight&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;Model is CONFIDENT&lt;br&gt;(low entropy)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="830" y="840" width="190" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_dec_yes" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;" edge="1" source="decision" target="use_llm" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="yes_label" value="&lt;b&gt;YES&lt;/b&gt;&lt;br&gt;(confident)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="760" y="850" width="70" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fallback" value="&lt;b&gt;FALLBACK&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Option A: Use classical&lt;br&gt;TSMOM signal instead&lt;br&gt;&lt;br&gt;Option B: Sit out&lt;br&gt;(position = 0)&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;Model is UNCERTAIN&lt;br&gt;(high entropy)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="830" y="980" width="190" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_dec_no" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="decision" target="fallback" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="710" y="1040"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="no_label" value="&lt;b&gt;NO&lt;/b&gt;&lt;br&gt;(uncertain)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="720" y="960" width="70" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_class_fallback" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;dashed=1;strokeWidth=1;" edge="1" source="classical_signal" target="fallback" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="150" y="1040"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="portfolio" value="&lt;b&gt;ENTROPY-FILTERED&lt;br&gt;MOMENTUM PORTFOLIO&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Monthly rebalanced&lt;br&gt;15 instruments × 120 months" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;arcSize=10;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="890" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_use_port" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="use_llm" target="portfolio" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fall_port" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="fallback" target="portfolio" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p5_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F0FF;strokeColor=#9673a6;arcSize=5;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1140" width="1340" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="p5_label" value="&lt;b&gt;PHASE 5: MULTI-DIMENSIONAL EVALUATION&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#7F6084;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1145" width="310" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_port_eval" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="portfolio" target="eval_strat" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="eval_strat" value="&lt;b&gt;Strategy Performance&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Annualized Return&lt;br&gt;• Sharpe Ratio&lt;br&gt;• Maximum Drawdown&lt;br&gt;• Calmar Ratio&lt;br&gt;• Hit Rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1190" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="eval_calib" value="&lt;b&gt;Calibration&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Brier Score&lt;br&gt;&amp;nbsp;&amp;nbsp;(1/N)Σ(fᵢ−oᵢ)²&lt;br&gt;• ECE (10 bins)&lt;br&gt;• Calibration Curves" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1190" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="eval_entropy" value="&lt;b&gt;Entropy Analysis&lt;/b&gt; ⭐&lt;br&gt;&lt;hr&gt;• Corr(H, forecast_error)&lt;br&gt;• Cohen's d (correct vs incorrect)&lt;br&gt;• ROC-AUC (entropy classifier)&lt;br&gt;• Filtered vs Unfiltered Sharpe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;fontSize=10;align=left;spacingLeft=8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1190" width="220" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="eval_cost" value="&lt;b&gt;Cost Efficiency&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• API cost per forecast&lt;br&gt;• Cost-adjusted Sharpe&lt;br&gt;• Reasoning tokens / $" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="760" y="1190" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="eval_proxy" value="&lt;b&gt;Proxy Entropy&lt;br&gt;Validation&lt;/b&gt;&lt;br&gt;&lt;hr&gt;• Proxy vs true entropy corr&lt;br&gt;• Proxy discrimination&lt;br&gt;• When logprobs unavailable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=10;fontSize=10;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1190" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="compare_title" value="&lt;b&gt;Key Comparisons&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#7F6084;fontStyle=5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1340" width="120" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="comp1" value="Classical TSMOM&lt;br&gt;vs&lt;br&gt;&lt;b&gt;Raw LLM Strategy&lt;/b&gt;&lt;br&gt;vs&lt;br&gt;&lt;b&gt;Entropy-Filtered LLM&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1370" width="170" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp2" value="Standard Model&lt;br&gt;vs&lt;br&gt;&lt;b&gt;Reasoning Model&lt;/b&gt;&lt;br&gt;&lt;i&gt;(same family)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="260" y="1370" width="170" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp3" value="High-Entropy Preds&lt;br&gt;vs&lt;br&gt;&lt;b&gt;Low-Entropy Preds&lt;/b&gt;&lt;br&gt;&lt;i&gt;(accuracy gap)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1370" width="170" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp4" value="True Logprob Entropy&lt;br&gt;vs&lt;br&gt;&lt;b&gt;Proxy Entropy&lt;/b&gt;&lt;br&gt;&lt;i&gt;(DeepSeek-R1)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1370" width="170" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp5" value="Per Asset Class:&lt;br&gt;&lt;b&gt;Equities vs Bonds&lt;br&gt;vs Commodities&lt;br&gt;vs Currencies&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1370" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="output" value="&lt;b&gt;OUTPUTS&lt;/b&gt;&lt;br&gt;&lt;hr&gt;📄 3-5 page research note&lt;br&gt;💻 Open-source GitHub repo&lt;br&gt;📊 7+ figures &amp; visualizations&lt;br&gt;📋 Lossfunk Residency Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;arcSize=10;fontSize=11;align=left;spacingLeft=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1350" width="260" height="110" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
